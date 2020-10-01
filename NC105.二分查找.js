@@ -22,6 +22,7 @@ function upper_bound_( n ,  v ,  a ) {
     }
     return left + 1;
 }
+
 module.exports = {
     upper_bound_ : upper_bound_
 };
