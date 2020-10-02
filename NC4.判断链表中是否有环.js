@@ -29,7 +29,7 @@ function hasCycle( head ) {
     else {
         return true;
     }
-}
+} 
 
 module.exports = {
     hasCycle : hasCycle
