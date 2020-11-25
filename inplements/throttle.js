@@ -1,16 +1,11 @@
-function throttle(func, wait, mustRunTime) {
-    let timer;
+function throttle(func, wait) {
     let start = new Date();
     return function() {
-        clearTimeout(timer);
         let that = this, args = arguments;
         let cur = new Date();
-        if((cur - start) >= mustRunTime) {
+        if(cur - start >= wait) {
             func.apply(that, args);
             start = cur;
-        }
-        else {
-            timer = setTimeout(func, wait);
         }
     }
 }
